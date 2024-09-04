@@ -1,7 +1,8 @@
 # Linux-to-OS-Install
 If you are a Linux user and do not have a storage device make a bootable device.
 Why not make a small partition in your Laptop/PC Hard disk act as bootable for the new OS to install as Dual Boot?
-**** It is only tested on Debian Linux and for installing Windows OS.**
+
+** It is only tested on Debian Linux and for installing Windows OS.
 
 **Steps**
 1. Download OS.iso file.
