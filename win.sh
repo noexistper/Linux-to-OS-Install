@@ -76,14 +76,13 @@ done
 list_partitions
 echo "................................................."
 
-while true; do
-    read -p "Enter the partition (e.g., /dev/nvme0n1p3): " target_partition
-    if lsblk | grep -q "$target_partition"; then
-        break
-    else
-        echo "Invalid partition. Please enter a valid partition from the list above."
-    fi
-done
+
+read -p "Enter the partition (e.g., /dev/nvme0n1p3): " target_partition
+if lsblk | grep -q "$target_partition"; then
+    break
+else
+    echo "Invalid partition. Please enter a valid partition from the list above."
+fi
 # .............................................................................................
 # .............................................................................................
 while true; do
