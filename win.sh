@@ -127,8 +127,7 @@ print_message "The $iso_name files have been copied successfully."
 
 echo -e "\033[1;32mInstructions:\033[0m"
 echo "** After your computer restarts, boot from the partition you copied the $iso_name files to."
-
 echo -e "\nYour PC will restart in 60 seconds."
-read -p "Press [Enter] to restart immediately, or wait for 60 seconds..."
-shutdown -r +1 "Press Ctrl+C to cancel."
+read -p "Press [Enter] to restart immediately, or Press Ctrl+C to cancel.."
+shutdown -r +1 "."
 shutdown -r now
