@@ -17,6 +17,7 @@ Why not make a small partition in your Laptop/PC Hard disk act as bootable for t
 In case if you have only one partition and no unallocated space for creating NTFS partition. And you want to resize the current mounted root directory. 
 1. If you got LVM, it's easy. I do not have LVM so, you will find methods on discussion websites.
 2. steps: for using swap partition, **risky methods**.
+**Again risky method, might ended up corrupting your linux partition**
 3. Run "allocate -l 2G /swapfile"
 4.  "chmod 600 /swapfile"
 5.  "mkswap /swapfile"
