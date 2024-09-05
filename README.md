@@ -11,7 +11,7 @@ Why not make a small partition in your Laptop/PC Hard disk act as bootable for t
 4. Enter path of NTFS partition.
 5. Enter path to .iso file.
 6. After restart, choose the partition with bootable OS. Similar to installation from any device.
-7. Done. 
+7. Done
 
 **Others**
 In case if you have only one partition and no unallocated space for creating NTFS partition. And you want to resize the current mounted root directory. 
