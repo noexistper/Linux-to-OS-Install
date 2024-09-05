@@ -76,24 +76,12 @@ done
 list_partitions
 echo "................................................."
 
-
 read -p "Enter the partition (e.g., /dev/nvme0n1p3): " target_partition
-if lsblk | grep -q "$target_partition"; then
-    break
-else
-    echo "Invalid partition. Please enter a valid partition from the list above."
-fi
-# .............................................................................................
-# .............................................................................................
-while true; do
-    read -p "Enter the path to the Windows ISO file: " iso_location
-    if [ -f "$iso_location" ]; then
-        iso_name=$(basename "$iso_location")
-        break
-    else
-        echo "Error: ISO file not found at $iso_location. Please enter a valid path."
-    fi
-done
+read -p "Enter the path to the Windows ISO file: " iso_location
+mount_point="/mnt/windows"
+iso_mount_point="/mnt/iso"
+mkdir -p "$mount_point"
+mkdir -p "$iso_mount_point"
 
 # .............................................................................................
 # .............................................................................................
@@ -106,10 +94,6 @@ else
     list_partitions
 fi
 # .............................................................................................
-
-iso_mount_point="/mnt/win11_iso"
-
-mkdir -p "$iso_mount_point"
 
 mount -o loop "$iso_location" "$iso_mount_point"
 if [ $? -eq 0 ]; then
